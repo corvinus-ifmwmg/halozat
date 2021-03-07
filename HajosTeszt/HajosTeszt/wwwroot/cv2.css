@@ -1,0 +1,111 @@
+﻿
+
+/*próbáljuk ki majd a végén, hogy mi történik a box-sizing kikommentelésével*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: Cambria;
+}
+
+p{
+    margin:10px;
+}
+
+#header {
+    background-color: goldenrod;
+    padding: 20px;
+}
+
+#nav a {
+    /* ugyanaz, mint flex-grow:1; flex-shrink:1;flex-basis:auto;*/
+    flex: 1 1 auto;
+    text-decoration: none;
+    color: black;
+}
+
+
+#nav {
+    background-color: gold;
+    text-align:center;
+    padding: 20px;
+}
+
+#article {
+    text-align: left;
+    background-color: floralwhite;
+    padding: 20px;
+    margin:10px;
+    border-radius:15px;
+    display: flex;
+}
+
+#aside {
+    background-color: lightgoldenrodyellow;
+    margin: 10px;
+    padding: 20px;
+    border-radius:15px;
+}
+
+#footer {
+    background-color: gold;
+    padding: 20px;
+    text-align:center;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+
+}
+
+
+span {
+    font-size: 1.3em;
+}
+
+a {
+    color: floralwhite;
+}
+
+    a:hover {
+        color: lightcyan;
+    }
+
+#zene {
+    background-color: goldenrod;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* 800px-nél nagyobb képernyő*/
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #main {
+        display: flex;
+    }
+
+    #nav,
+    #header {
+        order: -1;
+    }
+
+    #article {
+        flex: 1 1 75%;
+    }
+
+    #aside {
+        flex: 1 1 25%;
+    }
+}
